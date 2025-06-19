@@ -1,0 +1,67 @@
+﻿@model IEnumerable<ASP_Examen2_R_H_25.Models.Idee>
+
+@{
+    ViewData["Title"] = "Idées";
+}
+
+<h1>Idées</h1>
+
+@* 
+    TODO : Ajouter les boutons d'actions pour pouvoir ajoute, modifier et supprimer des idées
+
+    - "+" pour ajouter une idée 
+    - "🖉" permettant de modifier les idées 
+    - "x" permettant de supprimer les idées  
+
+    N'oubliez pas de demander une confirmation avant de supprimer.
+*@
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Titre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cout)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Titre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nom)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cout)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
