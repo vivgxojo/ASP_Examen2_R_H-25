@@ -33,7 +33,7 @@ namespace ASP_Examen2_R_H_25.Controllers
             //TODO : Appliquer la validation côté serveur
 
             _listeIdees.Ajouter(idee);
-            return View("Liste", _listeIdees.MesIdees);
+            return View("Index", _listeIdees.MesIdees);
 
         }
 
@@ -48,7 +48,7 @@ namespace ASP_Examen2_R_H_25.Controllers
         public ActionResult Delete(int id)
         {
             _listeIdees.Supprimer(id);
-            return View("Liste", _listeIdees.MesIdees);
+            return View("Index", _listeIdees.MesIdees);
 
         }
     }
